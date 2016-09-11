@@ -30,7 +30,7 @@ namespace FortuneTeller
             Console.WriteLine("Please enter your favorite ROYGBIV color.");
             Console.WriteLine("If you do not know what ROYGBIV is, please enter \"Help\" to get a list of the ROYGBIV colors.");
 
-            string color = (Console.ReadLine());
+            string color = Console.ReadLine();
 
             if (color.ToLower() == "help")
             {
@@ -42,12 +42,114 @@ namespace FortuneTeller
                 Console.WriteLine("I = Indigo");
                 Console.WriteLine("V = Violet");
                 Console.WriteLine("Again, please enter your favorite ROYGBIV color.");
-                string colorAfter = (Console.ReadLine());
+                color = Console.ReadLine();
             }
 
             Console.WriteLine("Please enter the number of siblings you have.");
 
             int siblings = int.Parse(Console.ReadLine());
+
+            string retire;
+
+            if(age%2 == 1)
+            {
+                retire = ("25 years");
+            }
+            else
+            {
+                retire = ("20 years");
+            }
+
+            string vacaLocation;
+
+            if(siblings == 0)
+            {
+                vacaLocation = ("the Bahamas");
+            }
+            else if(siblings ==1)
+            {
+                vacaLocation = ("Bora Bora");
+            }
+            else if(siblings == 2)
+            {
+                vacaLocation = ("Italy");
+            }
+            else if(siblings==3)
+            {
+                vacaLocation = ("Southern France");
+            }
+            else if (siblings >3)
+            {
+                vacaLocation = ("Maui");
+            }
+            else
+            {
+                vacaLocation = ("in an abandoned subway station in New York City");
+            }
+
+            string modeTran;
+
+            switch(color.ToLower())
+            {
+                case"red":
+
+                    modeTran = ("sports car");
+                    break;
+
+                case "orange":
+
+                    modeTran = ("speed boat");
+                    break;
+
+                case "yellow":
+
+                    modeTran = ("private jet");
+                    break;
+
+                case "green":
+
+                    modeTran = ("luxury SUV");
+                    break;
+
+                case "blue":
+
+                    modeTran = ("plane");
+                    break;
+
+                case "indigo":
+
+                    modeTran = ("yacht");
+                    break;
+
+                case "violet":
+
+                    modeTran = ("limo");
+                    break;
+
+                default:
+
+                    modeTran = ("broken RV");
+                    break;
+            }
+
+            string money;
+
+            if(birthMonth >=1 && birthMonth <= 4)
+            {
+                money = ("$1,000,000");
+            }
+            else if(birthMonth>=5 && birthMonth<=8)
+            {
+                money = ("$100,000,000");
+            }
+            else if(birthMonth>=9 && birthMonth<=12)
+            {
+                money = ("$1,000,000,000");
+            }
+            else
+            {
+                money = ("$0.00");
+            }
         }
     }
 }
