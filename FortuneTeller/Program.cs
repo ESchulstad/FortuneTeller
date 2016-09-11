@@ -84,7 +84,7 @@ namespace FortuneTeller
             }
             else
             {
-                vacaLocation = ("in an abandoned subway station in New York City");
+                vacaLocation = ("an abandoned subway station in New York City");
             }
 
             string modeTran;
@@ -150,6 +150,8 @@ namespace FortuneTeller
             {
                 money = ("$0.00");
             }
+
+            Console.Write(string.Concat(first," ",last," will retire in ", retire, " with ", money, " in the bank, a vacation home in ", vacaLocation, " and a ", modeTran, ".","\n"));
         }
     }
 }
